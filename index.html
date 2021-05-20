@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div onclick="handleclick" class="logo"><a href="#">My_World</a></div>
+            <ul class="nav-menu">
+                <div class="icon-menu close-mobile-btn">
+                    <i class="fa fa-times"></i>
+                </div>
+                <li><a href="#">Home</a></li>
+                <li><a href="#services">My Composition</a></li>
+                <li><a href="#marketing">Soon</a></li>
+                <li><a href="#">Soon</a></li>
+                <li class="nav-btn"><a href="#">Sign Up</a></li>
+            </ul>
+            <div class="icon-menu mobile-btn">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="banner">
+        <div class="circle">
+            <span>THE</span>
+            <h1>My_World</h1>
+            <h2>YouTube</h2>
+            <i></i>
+        </div>
+        <ul class="banner-items">
+            <li><a href="#">Website Design</a></li>
+            <li><a href="#">Original </a></li>
+            <li><a href="#">Videos</a></li>
+        </ul>
+    </div>
+    <div id="marketing" class="content">
+        <h1 class="title">My Composition</h1>
+     
+        
+        <ul id="services">
+            Մի օր կարթնանաս ու կզգաս,որ մենակ ես մնացել։Կարթնանաս լրիվ դատարկ ու անիմաստ կյանքով ու այդ ժամանակ քեզ պատած դատարկությունն այլևս ոչինչ ու ոչ ոք չի լցնի։Մի օր կարթնանաս ու կհասկանաս,որ աշխարհը կանգ է առել ու չի շարժվում,իսկ այն ժամանակ երբ շարժվում էր դու էիր կանգ առել։Մենք մեր ժամանակը ծախսում ենք անարժանների ու ոչ պիտանիների վրա ու ամենավատ զգացումներից մեկն էլ այն է,երբ մենք գնահատում ենք մեր ունեցածը չունեցած ժամանակ։Մի օր կարթնանանք ձեռնունայն,առանց ունեցվածքի ու առանց զգացմունքի։Ժամանակի ընթացքում ամեն ինչ սառում է,անգամ ամենագեղեցիկ զգացմունքը։Մենք ապրում ենք՝ինքներս էլ չհասկանալով ինչի՞ կամ ո՞ւմ համար,որովհետև մի օր արթնանում ենք ու զգում,որ մնացել ենք մենակ։Երբեմն մեր կորցրածն ու դրա ցավն այնքան մեծ է լինում,որ մենք անզոր ենք դառնում պայքարել դրա դեմ կամ մարդկանց բացատրել այն։Կորուստները ծանր ու թեթև չեն լինում՝կորցրածը եթե թանկ է լինում չափ ու սահման չի ունենում։Մենք միշտ ինչ որ բան կորցնում ենք՝մեկը ծնող,մյուսը քույր,մեկը եղբայր...ամեն մեկս էլ կորցնում ենք...կորցնում,որ զգանք,որ ցավանք,որ գնահատենք մեր ունեցածն այն ժամանակ,երբ հնարավորություն ունենք։ Հեղինակային My_World 
+               
+        
+    </div>
+    <hr><hr>
+    <center>
+ <footer>&copy; Copyright 2021 My_world</footer>
+
+    </h6>
+    <h2>Follow Me On social media</h2>
+    <div class="icon-bar">
+  <a href="https://youtube.com/channel/UCwK9MU0zOlhXIj5y_ydwTUw" class="youtube"><i class="fa fa-youtube"></i></a></div>
+  <a href="https://youtube.com/channel/UCwK9MU0zOlhXIj5y_ydwTUw" class="yt"><i class="fa fa-youtube"></i></a></div>
+</center>
+    <script>
+        const body = document.querySelector('body');
+        const navbar = document.querySelector('.navbar');
+        const navMenu = document.querySelector('.nav-menu');
+        const mobileButton = document.querySelector('.mobile-btn');
+        const closeMobileButton = document.querySelector('.close-mobile-btn');
+        mobileButton.onclick = () => {
+            navMenu.classList.add('active')
+            mobileButton.classList.add('hidden')
+            body.classList.add('disabled-scroll')
+        }
+
+        closeMobileButton.onclick = () => {
+            navMenu.classList.remove('active')
+            mobileButton.classList.remove('hidden')
+            body.classList.remove('disabled-scroll')
+        }
+
+        window.onscroll = () => {
+            this.scrollY > 100 ? navbar.classList.add('sticky') : navbar.classList.remove('sticky')
+        }
+    </script>
+</body>
+
+</html>
