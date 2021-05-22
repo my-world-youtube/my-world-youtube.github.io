@@ -8,6 +8,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 body{ background-image:url("maple-street.jpg")} 
+#services{
+				background-color:orange;
+								color:black;
+				}
 .navbar{
     position: fixed;
     background-color:#222429;
@@ -159,7 +163,7 @@ body{ background-image:url("maple-street.jpg")}
 }
 
 .banner-items li a:hover{
-    color: #fff;
+    color: white;
 }
 
 .content{
